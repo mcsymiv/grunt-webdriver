@@ -4,6 +4,7 @@
     "indent": [2, 4]
   },
   "parserOptions": {
+    "ecmaVersion": 2021,
     "sourceType": "module"
   },
   "globals": {

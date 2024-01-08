@@ -1,12 +1,10 @@
-import path from 'path'
-import resolve from 'resolve'
 import merge from 'deepmerge'
+import { Launcher } from '@wdio/cli'
 
 module.exports = function (grunt) {
     grunt.registerMultiTask('webdriver', 'run wdio test runner', function () {
         const done = this.async()
         const opts = merge(this.options(), this.data)
-        const Launcher = require(path.join(path.dirname(resolve.sync('@wdio/cli')), 'launcher')).default
 
         if (typeof opts.configFile !== 'string') {
             grunt.log.error('You need to define "configFile" property with the path to your wdio.conf.js')

@@ -1,19 +1,15 @@
 exports.config = {
+    path: '/',
     port: 4445,
-    host: 'localhost',
-    user: process.env.SAUCE_USERNAME,
-    key: process.env.SAUCE_ACCESS_KEY,
+    host: '127.0.0.1',
+    logLevel: 'debug',
     runner: 'local',
-    specs: ['./test/webdriver.js'],
+    specs: ['./webdriver.js'],
+    outputDir: `./logs.txt`,
     capabilities: [{
-        browserName: 'firefox'
-        /*
-        platform: 'OS X 10.11',
-        version: '45.0',
-        name: 'grunt-webdriver',
-        build: 'grunt-webdriver - ' + process.env.TRAVIS_BUILD_NUMBER,
-        'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER
-        */
+        browserName: 'chrome',
+        browserVersion: 'latest',
+        acceptInsecureCerts: true,
     }],
     baseUrl: 'http://webdriver.io',
     waitforTimeout: 10000,
