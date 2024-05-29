@@ -25,7 +25,7 @@
   },
   "scripts": {
     "build": "grunt build",
-    "prepublish": "sudo npm prune && npm run build",
+    "prepublish": "npm prune && npm run build",
     "test": "grunt webdriver --debug"
   },
   "dependencies": {
