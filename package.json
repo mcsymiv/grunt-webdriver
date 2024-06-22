@@ -25,6 +25,7 @@
   },
   "scripts": {
     "build": "grunt build",
+    "prepublish": "npm run build",
     "test": "grunt webdriver --debug"
   },
   "dependencies": {
