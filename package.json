@@ -50,7 +50,7 @@
     "grunt": "^1.6.1",
     "grunt-babel": "^8.0.0",
     "grunt-bump": "^0.8.0",
-    "grunt-cli": "^1.4.3",
+    "grunt-cli": "^1.5.0",
     "grunt-contrib-clean": "^2.0.1",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-eslint": "^24.3.0",
