@@ -41,14 +41,14 @@ module.exports = function (grunt) {
         },
         webdriver: {
             options: {
-                logLevel: 'trace',
-                waitforTimeout: 12345,
-                framework: 'mocha',
-                coloredLogs: true
+              maxInstances: 1,
+              logLevel: 'trace',
+              port: 4444,
+              framework: 'mocha',
+              waitforTimeout: 12345,
             },
-            testTargetConfigFile: {
+            test: {
                 configFile: './test/wdio.conf.js',
-                foo: 'bar'
             }
         }
     })
@@ -60,7 +60,7 @@ module.exports = function (grunt) {
         grunt.task.run([
             'eslint',
             'clean',
-            'babel'
+            'babel',
         ])
     })
     grunt.registerTask('release', 'Bump and tag version', function (type) {

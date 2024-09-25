@@ -2,10 +2,10 @@ exports.config = {
     path: '/',
     port: 4445,
     host: '127.0.0.1',
-    logLevel: 'debug',
+    logLevel: 'trace',
     runner: 'local',
     specs: ['./webdriver.js'],
-    outputDir: `./logs.txt`,
+    outputDir: `./logs`,
     capabilities: [{
         browserName: 'chrome',
         browserVersion: 'latest',
@@ -13,7 +13,7 @@ exports.config = {
     }],
     baseUrl: 'http://webdriver.io',
     waitforTimeout: 10000,
-    framework: 'cucumber', // gets overwritten in gruntfile
+    framework: 'mocha', // gets overwritten in gruntfile
     mochaOpts: {
         timeout: 30000
     },
